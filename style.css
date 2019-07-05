@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f89808;
+  padding-top: 200px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.row-1,
+.row-2 {
+  display: flex;
+  width: 600px;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.row-1 {
+  margin-bottom: 50px;
+}
+
+.loader-1 {
+  position: relative;
+  margin: auto;
+  color: #fff;
+}
+
+.loader-1 .dot {
+  display: inline-block;
+}
+
+.loader-1 .dot:before {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  left: -25px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: bounce .5s alternate infinite ease;
+}
+
+@keyframes bounce {
+  0% {
+    top: 30px;
+    height: 5px;
+    border-radius: 40px 40px 20px 20px;
+    transform: scaleX(2);
+  }
+  35% {
+    height: 15px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: -15px;
+  }
+}
+
+.loader-2 {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  margin: auto;
+}
+
+.loader-2 .dot-1,
+.loader-2 .dot-2,
+.loader-2 .dot-3,
+.loader-2 .dot-4,
+.loader-2 .dot-5,
+.loader-2 .dot-6,
+.loader-2 .dot-7,
+.loader-2 .dot-8,
+.loader-2 .dot-9,
+.loader-2 .dot-10,
+.loader-2 .dot-11,
+.loader-2 .dot-12 {
+  position: absolute;
+  background-color: #fff;
+  opacity: .8;
+  width: 8px;
+  height: 8px;
+  animation: clock 2.4s linear infinite;
+  transform: scale(.3);
+  background-image: radial-gradient(50% 50%, rgb(255, 255, 255), rgba(255, 255, 255, .5));
+}
+
+.loader-2 .dot-1 {
+  top: 1px;
+  left: 23px;
+  animation-delay: -2.2s;
+}
+
+.loader-2 .dot-2 {
+  top: 4px;
+  right: 12px;
+  animation-delay: -2s;
+}
+
+.loader-2 .dot-3 {
+  top: 12px;
+  right: 4px;
+  animation-delay: -1.8s;
+}
+
+.loader-2 .dot-4 {
+  top: 23px;
+  right: 1px;
+  animation-delay: -1.6s;
+}
+
+.loader-2 .dot-5 {
+  right: 4px;
+  bottom: 12px;
+  animation-delay: -1.4s;
+}
+
+.loader-2 .dot-6 {
+  right: 12px;
+  bottom: 4px;
+  animation-delay: -1.2s;
+}
+
+.loader-2 .dot-7 {
+  left: 23px;
+  bottom: 1px;
+  animation-delay: -1s;
+}
+
+.loader-2 .dot-8 {
+  left: 12px;
+  bottom: 4px;
+  animation-delay: -.8s;
+}
+
+.loader-2 .dot-9 {
+  left: 4px;
+  bottom: 12px;
+  animation-delay: -.6s;
+}
+
+.loader-2 .dot-10 {
+  top: 23px;
+  left: 1px;
+  animation-delay: -.4s;
+}
+
+.loader-2 .dot-11 {
+  left: 4px;
+  top: 12px;
+  animation-delay: -.2s;
+}
+
+.loader-2 .dot-12 {
+  left: 12px;
+  top: 4px;
+}
+
+
+@keyframes clock {
+  60% {
+    transform: scale(.6);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  0%, 100% {
+    transform: scale(.3);
+  }
+}
+
+.loader-3 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: auto;
+}
+
+.loader-3 .dot-1,
+.loader-3 .dot-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: .5;
+  animation: blink 2s infinite ease-in-out;
+}
+
+.loader-3 .dot-2 {
+  animation-delay: -1s;
+}
+
+@keyframes blink {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loader-4 {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stair-1,
+.stair-2,
+.stair-3,
+.stair-4,
+.stair-5 {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 50px;
+  background: #fff;
+  transform-origin: center bottom;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.stair-1 {
+  left: 0;
+  transform: scale(1, .2);
+  animation: step-1 4s infinite;
+}
+
+.stair-2 {
+  left: 15px;
+  transform: scale(1, .4);
+  animation: step-2 4s infinite;
+}
+
+.stair-3 {
+  left: 30px;
+  transform: scale(1, .6);
+  animation: step-3 4s infinite;
+}
+
+.stair-4 {
+  left: 45px;
+  transform: scale(1, .8);
+  animation: step-4 4s infinite;
+}
+
+.stair-5 {
+  left: 60px;
+  transform: scale(1, 1);
+  animation: step-5 4s infinite;
+}
+
+.loader-4 .dot {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  animation: climb 4s infinite;
+}
+
+@keyframes climb {
+  0% {
+    transform: translate(0, 0);
+  }
+  5% {
+    transform: translate(8px, -14px);
+  }
+  10% {
+    transform: translate(15px, -10px)
+  }
+  17% {
+    transform: translate(23px, -24px)
+  }
+  20% {
+    transform: translate(30px, -20px)
+  }
+  27% {
+    transform: translate(38px, -34px)
+  }
+  30% {
+    transform: translate(45px, -30px)
+  }
+  37% {
+    transform: translate(53px, -44px)
+  }
+  40% {
+    transform: translate(60px, -40px)
+  }
+  50% {
+    transform: translate(60px, 0)
+  }
+  57% {
+    transform: translate(53px, -14px)
+  }
+  60% {
+    transform: translate(45px, -10px)
+  }
+  67% {
+    transform: translate(37px, -24px)
+  }
+  70% {
+    transform: translate(30px, -20px)
+  }
+  77% {
+    transform: translate(22px, -34px)
+  }
+  80% {
+    transform: translate(15px, -30px)
+  }
+  87% {
+    transform: translate(7px, -44px)
+  }
+  90% {
+    transform: translate(0, -40px)
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes step-1 {
+  0% {
+    transform: scale(1, .2);
+  }
+  40% {
+    transform: scale(1, .2);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  90% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, .2);
+  }
+}
+
+@keyframes step-2 {
+  0% {
+    transform: scale(1, .4);
+  }
+  40% {
+    transform: scale(1, .4);
+  }
+  50% {
+    transform: scale(1, .8);
+  }
+  90% {
+    transform: scale(1, .8);
+  }
+  100% {
+    transform: scale(1, .4);
+  }
+}
+
+@keyframes step-3 {
+  0% {
+    transform: scale(1, .6);
+  }
+  100% {
+    transform: scale(1, .6);
+  }
+}
+
+@keyframes step-4 {
+  0% {
+    transform: scale(1, .8);
+  }
+  40% {
+    transform: scale(1, .8);
+  }
+  50% {
+    transform: scale(1, .4);
+  }
+  90% {
+    transform: scale(1, .4);
+  }
+  100% {
+    transform: scale(1, .8);
+  }
+}
+
+@keyframes step-5 {
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, .2);
+  }
+  90% {
+    transform: scale(1, .2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.loader-5 {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loader-5 .dot-1,
+.loader-5 .dot-2,
+.loader-5 .dot-3,
+.loader-5 .dot-4 {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.loader-5 .dot-1 {
+  left: 5px;
+  animation: scaling-up .6s infinite;
+}
+
+.loader-5 .dot-2 {
+  left: 5px;
+  animation: horizontal-rotation .6s infinite;
+}
+
+.loader-5 .dot-3 {
+  left: 25px;
+  animation: horizontal-rotation .6s infinite;
+}
+
+.loader-5 .dot-4 {
+  left: 45px;
+  animation: scaling-down .6s infinite;
+}
+
+@keyframes scaling-up {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaling-down {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes horizontal-rotation {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 0);
+  }
+}
+
+.loader-6 {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  animation: round-rotating 2s infinite linear;
+}
+
+.loader-6 .dot-1,
+.loader-6 .dot-2 {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 100%;
+  animation: r-blinking 2s infinite ease-in-out;
+}
+
+.loader-6 .dot-2 {
+  left: -10px;
+  top: 10px;
+  animation-delay: -1s;
+}
+
+@keyframes round-rotating {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes r-blinking {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
